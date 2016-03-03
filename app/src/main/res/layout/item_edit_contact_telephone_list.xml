@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#22ffffff"
+    >
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:src="@drawable/abc_ic_clear_mtrl_alpha"
+        android:tint="@color/yellow"
+        />
+    <EditText
+        android:id="@+id/contact_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:textSize="30sp"
+        android:layout_weight="2"
+        android:textColor="@color/yellow"
+        android:hint="+1 (746) 9876-5432"
+        />
+    <!--<Spinner
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:entries="@array/items_test"
+        >
+
+    </Spinner>-->
+</LinearLayout>

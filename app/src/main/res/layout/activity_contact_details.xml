@@ -1,0 +1,238 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ContactDetails"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="15dp"
+                android:tint="@color/yellow"
+                android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+                android:onClick="onBackButtonClicked"
+                />
+
+            <TextView
+                android:id="@+id/contact_name"
+                android:text="Contact Name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/yellow"
+
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="15dp"
+                android:tint="@color/yellow"
+                android:src="@android:drawable/ic_menu_edit"
+                android:onClick="onEditContactButtonClicked"
+                />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="15dp"
+                android:tint="@color/yellow"
+                android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/contact_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/contact_photo"
+                    android:layout_gravity="center"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/photo_crop"
+                    android:layout_gravity="center"
+                    android:tint="@color/app_bg"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/yellow"
+                android:text="@string/actions"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/yellow"
+                android:background="#22ffffff"
+                android:text="@string/telephone"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#22ffffff"
+                android:paddingRight="15dp"
+                >
+                <TextView
+                    android:id="@+id/telephone_view"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="+9 (999) 99999-9999"
+                    android:padding="15dp"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:tint="@color/yellow"
+                    android:src="@android:drawable/sym_action_call"
+                    android:onClick="onCallButtonClicked"
+                />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:tint="@color/yellow"
+                    android:src="@android:drawable/sym_action_chat"
+                    android:onClick="onSendSmSButtonClicked"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/yellow"
+                android:text="@string/email"
+                /><!-- contact@phonbuk.com -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="15dp"
+                >
+                <TextView
+                    android:id="@+id/email_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="contact@phonbuk.com"
+                    android:padding="15dp"
+                    android:textColor="@color/abc_primary_text_material_dark"
+                    />
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:tint="@color/yellow"
+                    android:src="@android:drawable/ic_dialog_email"
+                    android:onClick="onSendMailButtonClicked"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/yellow"
+                android:background="#22ffffff"
+                android:text="@string/address"
+                />
+
+            <TextView
+                android:id="@+id/address_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="999 Address Example"
+                android:padding="15dp"
+                android:background="#22ffffff"
+                android:textColor="@color/abc_primary_text_material_dark"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:paddingTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/yellow"
+                android:text="@string/birth_date"
+                />
+
+            <TextView
+                android:id="@+id/birth_date_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="August 06, 2015"
+                android:padding="15dp"
+                android:textColor="@color/abc_primary_text_material_dark"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
